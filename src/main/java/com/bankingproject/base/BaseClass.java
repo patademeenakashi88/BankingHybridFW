@@ -8,5 +8,11 @@ public class BaseClass {
 			System.setProperty("webdriver.chrome.driver", "E:\\chromedriver.exe");
 			WebDriver driver = new ChromeDriver();
 			driver.get("https://demo.guru99.com/V1/index.php");
+			
+			System.out.println("hello");
+			
+			
+			
+			
 		}
 }
