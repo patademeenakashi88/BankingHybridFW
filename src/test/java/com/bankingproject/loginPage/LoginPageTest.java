@@ -7,15 +7,18 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.bankingproject.base.BaseClass;
+import com.bankingproject.pom.loginPagePom;
 
 public class LoginPageTest extends BaseClass {
 	
-	@BeforeMethod
+	loginPagePom LoginPagePom;
+	
+	@BeforeClass
 	public void setUp() {
 		launchWebsite();
 	}
 
-	@AfterMethod
+	@AfterClass
 	public void tearDown() {
 		driver.close();
 	}
@@ -40,4 +43,16 @@ public class LoginPageTest extends BaseClass {
 		}
 	}
 	
+	@Test
+	public void clickOnGetCredential() throws InterruptedException {
+		LoginPagePom = new loginPagePom();
+		LoginPagePom.clickOnGetCredential();
+		Thread.sleep(5000);
+	}
+	
+	@Test
+	public void clickOnLoginButton() {
+		LoginPagePom = new loginPagePom();
+		LoginPagePom.clickOnLoginButton();
+	}
 }
