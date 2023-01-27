@@ -18,11 +18,12 @@ public class BankHomePagePom extends BaseClass{
 	  @FindBy(xpath="//input[@name='btnLogin']")
 	  WebElement submitButton;
 	  
-	  public void setEmailId() {
-		  emailId.sendKeys("abcd@gamil.com");
+	  public void setEmailId(String email) {
+		  emailId.sendKeys(email);
 	  }
 	  
-	  public void clickSubmit() {
+	  public CredentialPom clickSubmit() {
 		  submitButton.click();
+		  return new CredentialPom();
 	  }
 }
